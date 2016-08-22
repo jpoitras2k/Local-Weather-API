@@ -1,12 +1,14 @@
 body {
-  background: lightgrey;
+   background-image: url(https://c6.staticflickr.com/9/8161/28538453413_6b356650c9_k.jpg);
+  background-repeat: no repeat;
   padding: 45px;
-}
+  color: white;
+   }
 
 h1 {
   font-size: 60px;
   padding: 30px;
-}
+ }
 
 #city {
   font-size: 52px;

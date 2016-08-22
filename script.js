@@ -9,7 +9,7 @@ $(document).ready(function() {
     API = API + "q=" + myCity + appid;
 
     $.getJSON(API, function(myData) {
-      $('#city').html(myData.name + " - current city, within the country of " + myData.sys.country);
+      $('#city').html(myData.name + ",  "+ myData.sys.country);
       celsius = Math.floor(myData.main.temp);
       $('#temp').html(celsius + "°");
       $('#prec').html(myData.weather[0].main + "  ... ");
