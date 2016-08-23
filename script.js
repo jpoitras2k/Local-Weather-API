@@ -2,14 +2,16 @@ $(document).ready(function() {
   var API = "http://api.openweathermap.org/data/2.5/weather?";
   var celsius;
   var myCity;
+  var myRegion;
   var appid = "&units=metric&appid=3915d50cb899562300fa31025a84d74b";
   $.getJSON('http://ip-api.com/json', function(data) {
     myCity = data.city;
+   
 
     API = API + "q=" + myCity + appid;
 
     $.getJSON(API, function(myData) {
-      $('#city').html(myData.name + ",  "+ myData.sys.country);
+      $('#city').html(myData.name + ",  "+ data.region);
       celsius = Math.floor(myData.main.temp);
       $('#temp').html(celsius + "°");
       $('#prec').html(myData.weather[0].main + "  ... ");
